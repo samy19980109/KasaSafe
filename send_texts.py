@@ -2,8 +2,9 @@ from twilio.rest import Client
 class send_texts:
     
     def __init__(self, destNumber, emergContact = None):
-        self.accountSID = 'ACf33e1ad1e9fef28b8bfb8d138b3c481c'
-        self.accounTOKEN = 'fff365c67321a41d9b15a3f5dcf3468f'
+        # Account SID and Token are hidden for privacy
+        self.accountSID = '*****************************'
+        self.accounTOKEN = '*****************************'
 
         self.tw = Client(self.accountSID, self.accounTOKEN)
         self.twNumber = '+12898143339'

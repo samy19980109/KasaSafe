@@ -11,7 +11,7 @@ class routing:
         self.lat = 0
         self.possible = []
 
-        response = requests.post(url="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyD8np92Z7kxjUMm9jSFE2Y97SzB0QCToUE")
+        response = requests.post(url="https://www.googleapis.com/geolocation/v1/geolocate?key=<API_KEY>")
 
         for key in response.json():
             if key == "location":
@@ -24,7 +24,7 @@ class routing:
 
     def possible_places(self):
         response = requests.get(
-            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=cafe&radius=500&key=AIzaSyD8np92Z7kxjUMm9jSFE2Y97SzB0QCToUE")
+            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=cafe&radius=500&key=<API_KEY>")
         # print(response.status_code)
         # print("")
         # print("")
@@ -41,7 +41,7 @@ class routing:
                             self.possible.append(item[key])
 
         response = requests.get(
-            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=restaurant&radius=500&key=AIzaSyD8np92Z7kxjUMm9jSFE2Y97SzB0QCToUE")
+            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=restaurant&radius=500&key=<API_KEY>")
         # print(response.status_code)
         # print("")
         # print("")
@@ -58,7 +58,7 @@ class routing:
                             self.possible.append(item[key])
 
         response = requests.get(
-            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=bakery&radius=500&key=AIzaSyD8np92Z7kxjUMm9jSFE2Y97SzB0QCToUE")
+            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=bakery&radius=500&key=<API_KEY>")
         # print(response.status_code)
         # print("")
         # print("")
@@ -75,7 +75,7 @@ class routing:
                             self.possible.append(item[key])
 
         response = requests.get(
-            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=bar&radius=500&key=AIzaSyD8np92Z7kxjUMm9jSFE2Y97SzB0QCToUE")
+            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=bar&radius=500&key=<API_KEY>")
         # print(response.status_code)
         # print("")
         # print("")
@@ -92,7 +92,7 @@ class routing:
                             self.possible.append(item[key])
 
         response = requests.get(
-            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=parking&radius=500&key=AIzaSyD8np92Z7kxjUMm9jSFE2Y97SzB0QCToUE")
+            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=parking&radius=500&key=<API_KEY>")
         # print(response.status_code)
         # print("")
         # print("")
@@ -109,7 +109,7 @@ class routing:
                             self.possible.append(item[key])
 
         response = requests.get(
-            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=taxi_stand&radius=500&key=AIzaSyD8np92Z7kxjUMm9jSFE2Y97SzB0QCToUE")
+            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=taxi_stand&radius=500&key=<API_KEY>")
         # print(response.status_code)
         # print("")
         # print("")
@@ -126,7 +126,7 @@ class routing:
                             self.possible.append(item[key])
 
         response = requests.get(
-            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=gas_station&radius=1000&key=AIzaSyD8np92Z7kxjUMm9jSFE2Y97SzB0QCToUE")
+            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=gas_station&radius=1000&key=<API_KEY>")
         # print(response.status_code)
         # print("")
         # print("")
@@ -143,7 +143,7 @@ class routing:
                             self.possible.append(item[key])
 
         response = requests.get(
-            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=rv_park&radius=1000&key=AIzaSyD8np92Z7kxjUMm9jSFE2Y97SzB0QCToUE")
+            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=rv_park&radius=1000&key=<API_KEY>")
         # print(response.status_code)
         # print("")
         # print("")
@@ -160,7 +160,7 @@ class routing:
                             self.possible.append(item[key])
 
         response = requests.get(
-            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=lodging&radius=1000&key=AIzaSyD8np92Z7kxjUMm9jSFE2Y97SzB0QCToUE")
+            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=lodging&radius=1000&key=<API_KEY>")
         # print(response.status_code)
         # print("")
         # print("")
@@ -177,7 +177,7 @@ class routing:
                             self.possible.append(item[key])
 
         response = requests.get(
-            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=mosque&radius=1000&key=AIzaSyD8np92Z7kxjUMm9jSFE2Y97SzB0QCToUE")
+            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=mosque&radius=1000&key=<API_KEY>")
         # print(response.status_code)
         # print("")
         # print("")
@@ -194,7 +194,7 @@ class routing:
                             self.possible.append(item[key])
 
         response = requests.get(
-            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=hindu_temple&radius=1000&key=AIzaSyD8np92Z7kxjUMm9jSFE2Y97SzB0QCToUE")
+            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=hindu_temple&radius=1000&key=<API_KEY>")
         # print(response.status_code)
         # print("")
         # print("")
@@ -211,7 +211,7 @@ class routing:
                             self.possible.append(item[key])
 
         response = requests.get(
-            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=church&radius=1000&key=AIzaSyD8np92Z7kxjUMm9jSFE2Y97SzB0QCToUE")
+            "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + str(self.lat) +","+ str(self.long) +"&type=church&radius=1000&key=<API_KEY>")
         # print(response.status_code)
         # print("")
         # print("")
@@ -234,7 +234,7 @@ class routing:
         
 
     def routes(self, origin, destination):
-        gmaps = googlemaps.Client(key='AIzaSyD8np92Z7kxjUMm9jSFE2Y97SzB0QCToUE')
+        gmaps = googlemaps.Client(key='<API_KEY>')
 
         # Geocoding an address
         geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
